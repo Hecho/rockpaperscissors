@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+    <button>Play a game</button>
+  <script>
+const button = document.querySelector('button');
+
+button.onclick = function() {
+  var playerInput = prompt("Pick Rock, Paper or Scissors!");
+  console.log(playerInput);
+  window.playerSelection = capitalize(playerInput);
+  console.log(playerSelection);
+  computerPlay()
+  playRound()
+}
+
+function capitalize(playerInput) {
+    const playerSelection = playerInput.charAt(0).toUpperCase() + playerInput.substring(1).toLowerCase();
+    console.log(playerSelection)
+    return playerSelection
+}
+
+function computerPlay() {
+        const computerGuess = Math.floor(Math.random() * 3);
+        console.log (computerGuess)
+        if (computerGuess == 0) {
+            window.computerSelection = "Rock"
+        } else if (computerGuess == 1) {
+                window.computerSelection = "Paper"
+            } else {
+                window.computerSelection = "Scissors"
+            }
+        console.log(computerSelection)
+        return computerSelection;     
+}
+
+function playRound(playerSelection, computerSelection) {
+       console.log(this.playerSelection)
+       console.log(this.computerSelection)
+         if (this.playerSelection == "Rock" && this.computerSelection == "Paper" ||
+         this.playerSelection == "paper" && this.computerSelection == "Scissors" ||
+         this.playerSelection == "Scissors" && this.computerSelection == "Rock") {
+             console.log("You lose! " + this.computerSelection + " beats " + this.playerSelection)
+         } else if (this.playerSelection == "Rock" && this.computerSelection == "Scissors" ||
+         this.playerSelection == "paper" && this.computerSelection == "Rock" ||
+         this.playerSelection == "Scissors" && this.computerSelection == "Paper") {
+             console.log("You win! " + this.playerSelection + " beats " + this.computerSelection)
+         } else {
+             console.log("Tie! Try again!")
+     }
+}
+  </script>
+</body>
+</html>
