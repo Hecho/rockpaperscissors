@@ -48,14 +48,20 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
        console.log(this.playerSelection)
        console.log(this.computerSelection)
-         if (this.playerSelection == "Rock" && this.computerSelection == "Paper" ||
-         this.playerSelection == "paper" && this.computerSelection == "Scissors" ||
-         this.playerSelection == "Scissors" && this.computerSelection == "Rock") {
+         if (this.playerSelection == "Rock" 
+            && this.computerSelection == "Paper" 
+            || this.playerSelection == "paper" 
+            && this.computerSelection == "Scissors" 
+            || this.playerSelection == "Scissors" 
+            && this.computerSelection == "Rock") {
               alert("You lose! " + this.computerSelection + " beats " + this.playerSelection)
               console.log("You lose! " + this.computerSelection + " beats " + this.playerSelection)
-         } else if (this.playerSelection == "Rock" && this.computerSelection == "Scissors" ||
-         this.playerSelection == "paper" && this.computerSelection == "Rock" ||
-         this.playerSelection == "Scissors" && this.computerSelection == "Paper") {
+         } else if (this.playerSelection == "Rock" 
+            && this.computerSelection == "Scissors" 
+            || this.playerSelection == "paper" 
+            && this.computerSelection == "Rock" 
+            || this.playerSelection == "Scissors" 
+            && this.computerSelection == "Paper") {
               alert("You win! " + this.playerSelection + " beats " + this.computerSelection)
               console.log("You win! " + this.playerSelection + " beats " + this.computerSelection)
          } else {
